@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#page1 {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#page1 h1 {
+  color: white;
+  font-size: 8vw;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 18vh;
+  padding-top: 100px;
+  padding-left: 15%;
+}
+
+#page1 h1 svg {
+  height: 11vh;
+  width: 5.3vw;
+  background-color: #0da34e;
+  border-radius: 60px;
+}
+
+#page1-para {
+  margin-top: 30px;
+}
+
+#page1-para p {
+  color: white;
+  font-size: 2.6vh;
+  margin-top: 0.5vh;
+  text-align: center;
+}
+
+#buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 80px;
+}
+
+#buttons button {
+  background-color: black;
+  border: 1px solid white;
+  padding: 10px 20px;
+  color: white;
+  font-size: 2vh;
+  margin: 0px 8px;
+  border-radius: 30px;
+}
+
+#page2 {
+  height: 100vh;
+  width: 100%;
+  background-color: grey;
+}
+
+nav {
+  position: absolute;
+  display: flex;
+  height: 8vh;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0px 140px;
+  color: white;
+  margin-top: 20px;
+}
+
+nav h2 {
+  font-size: 5vh;
+  font-weight: 900;
+}
+
+nav hr {
+  color: white;
+}
+
+nav #nav-part2 {
+  display: flex;
+  padding: 10px 40px;
+  gap: 20px;
+  text-transform: uppercase;
+  font-size: 1.5vh;
+}
+
+nav button {
+  background-color: #0da34e;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 2vh;
+  font-weight: 900;
+}
+
+#nav-bottom {
+  height: 0;
+  position: absolute;
+  width: 80%;
+  bottom: 0%;
+  border-bottom: 1px solid white;
+  transition: all ease 0.65s;
+}
+
+nav:hover #nav-bottom {
+  height: 100%;
+  bottom: -100%;
+}
+
+#moving-div {
+  margin-top: 10vh;
+  position: absolute;
+  bottom: 3%;
+  white-space: nowrap;
+  padding: 1.2vw;
+  overflow: hidden;
+  width: 44%;
+}
+
+#moving-div .move {
+  display: inline-block;
+  animation-name: mobe;
+  animation-duration: 9s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#moving-div .move img {
+  height: 1vw;
+  margin: 0 1.2vw;
+}
+
+@keyframes mobe {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#blur-left {
+  height: 100%;
+  width: 20%;
+  background: linear-gradient(to right, black, transparent);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+#blur-right {
+  height: 100%;
+  width: 20%;
+  background: linear-gradient(to right, transparent, black);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
